@@ -1,0 +1,6 @@
+streamlit==1.44.1
+streamlit-option-menu==0.4.0
+streamlit-slickgrid==0.1.11
+supabase==2.15.0
+supafunc==0.9.4
+pycountry==24.6.1
