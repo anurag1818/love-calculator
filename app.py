@@ -31,9 +31,12 @@ def save_to_supabase(name1, name2, score, location):
 def get_location():
     try:
         res = requests.get("https://ipinfo.io/json").json()
-        return res.get("city", "Unknown") + ", " + res.get("region", "")
+        city = res.get("city", "Unknown")
+        region = res.get("region", "")
+        country = res.get("country", "")
+        return f"{city}, {region}, {country}"
     except:
-        return "Unknown"
+        return "Location Unknown"
 
 # --- UI ---
 st.set_page_config(page_title="❤ Love Calculator", layout="centered")
